@@ -1,0 +1,85 @@
+# ============================================================
+# .gitignore — Speech-to-Text Bahasa Bengkulu
+# ============================================================
+
+# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+wheels/
+*.whl
+.installed.cfg
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.manifest
+*.spec
+
+# ── Virtual environment ─────────────────────────────────────
+.venv/
+venv/
+ENV/
+env/
+.env
+.env.local
+
+# ── Dataset audio (bisa sangat besar) ───────────────────────
+# Simpan metadata.csv di repo, tapi BUKAN file audio
+dataset/audio/*.wav
+dataset/audio/*.flac
+dataset/audio/*.mp3
+dataset/audio/*.ogg
+dataset/audio/*.m4a
+# Pertahankan struktur folder
+!dataset/audio/.gitkeep
+!dataset/metadata.csv
+
+# ── Model checkpoint (bisa sangat besar) ────────────────────
+models/*.pt
+models/*.pth
+models/*.bin
+# Pertahankan vocab.txt — ukuran kecil, berguna untuk inference
+!models/vocab.txt
+
+# ── Hasil eksperimen ─────────────────────────────────────────
+results/*.log
+results/*.csv
+results/*.json
+
+# ── Jupyter Notebook ─────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── IDE ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Testing ──────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ── Streamlit cache ──────────────────────────────────────────
+.streamlit/
+
+# ── File sementara ───────────────────────────────────────────
+tmp/
+temp/
+*.tmp
+*.bak

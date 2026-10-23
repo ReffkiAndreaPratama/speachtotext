@@ -1,0 +1,39 @@
+# ============================================================
+# Speech-to-Text Bahasa Bengkulu
+# requirements.txt
+# Python 3.11+
+# ============================================================
+#
+# Instalasi:
+#   pip install -r requirements.txt
+#
+# Jika menggunakan GPU (CUDA 11.8):
+#   pip install torch==2.2.0+cu118 torchaudio==2.2.0+cu118 \
+#       --index-url https://download.pytorch.org/whl/cu118
+#
+# Jika hanya CPU:
+#   pip install torch==2.2.0+cpu torchaudio==2.2.0+cpu \
+#       --index-url https://download.pytorch.org/whl/cpu
+# ============================================================
+
+# ── Deep Learning ──────────────────────────────────────────
+torch==2.2.0
+torchaudio==2.2.0
+
+# ── Audio ──────────────────────────────────────────────────
+librosa==0.10.2
+soundfile==0.12.1
+
+# ── Data & Numerik ─────────────────────────────────────────
+numpy==1.26.4
+pandas==2.2.1
+scikit-learn==1.4.1.post1
+
+# ── Evaluasi ───────────────────────────────────────────────
+jiwer==3.0.4
+
+# ── Web Application ────────────────────────────────────────
+streamlit==1.32.2
+
+# ── Utilitas ───────────────────────────────────────────────
+tqdm==4.66.2
